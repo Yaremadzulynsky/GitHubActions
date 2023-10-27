@@ -19,7 +19,7 @@ jobs:
       - name: Clone Repo
         uses: actions/checkout@v2
         with:
-          repository: Githubsldkjflsdkjfldksjf
+          repository: Yaremadzulynsky/GitHubJest
 
       - name: Install Deps
         run: npm install
