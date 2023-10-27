@@ -1,0 +1,30 @@
+name: Jest Test
+
+on: 
+  push: 
+   branches:
+   - main
+   paths: 
+   - 'async-api/**'
+
+jobs:
+  jest-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+
+      - name: Clone Repo
+        uses: actions/checkout@v2
+        with:
+          repository: Githubsldkjflsdkjfldksjf
+
+      - name: Install Deps
+        run: npm install
+
+      - name: Run Script
+        run: |
+          chmod +x ./run-jest.sh
+          ./run-jest.sh
