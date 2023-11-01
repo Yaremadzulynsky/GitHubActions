@@ -20,6 +20,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: Yaremadzulynsky/GitHubJest
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install Deps
         run: npm install
